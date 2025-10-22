@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Brasil</title>
+    <link rel="stylesheet" href="{{ asset('css/sabor_brasil.css') }}">
+</head>
+<body>
+    
+    <div class="container"> 
+        <div class="coluna perfil">
+            <img src="{{ asset('public/logo_sabor_do_brasil.png') }}" alt="" class="logo">
+            <h2 class="titulo">Sabor do Brasil</h2>
+            <hr class="linha">
+        </div>
+        
+        <main class="coluna_publicacoes">
+            <div class="cabecalho_publicacao">
+                <h3>Publicações</h3>
+                <hr class="linha divisor-publicacoes">
+            </div>
+
+            <div class="publicacao">
+                <p class="titulo_prato">Torresmo Crocante</p>
+                <img src="{{ asset('img/publicacao01.png') }}" alt="Prato 01" class="imagem_prato">
+
+                <div class="rodape_publicacao">
+                    <span class="local">Paralelo PUB</span>
+                    <span class="cidade">Maceió-AL</span>
+                    <div class="interacoes">
+                        <span class="interacao like">
+                            <img src="{{ asset('img/icons8-flecha-grossa-apontando-para-cima-24.png') }}" alt="Like">
+                            2
+                        </span>
+                        <span class="interacao dislike">
+                            <img src="{{ asset('img/icons8-flecha-grossa-apontando-para-baixo-24.png') }}" alt="Dislike">
+                            1
+                        </span>
+                        <span class="interacao chat">
+                            <img src="{{ asset('img/icons8-balão-de-fala-24.png') }}" alt="Comentários">
+                            4
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="coluna login">
+            <button class="bt_entrar">Entrar</button>
+        </div>
+    </div> 
+
+    <footer class="rodape">
+        <span class="texto-rodape">Sabor do Brasil</span>
+        <span class="texto-rodape">Copyright - 2024</span>
+    </footer>
+
+    <style> body { margin: 0; font-family: Arial, sans-serif; } .container { display: grid; grid-template-columns: 330px 600px 350px; grid-template-rows: 600px 600px; height: 100vh; text-align: center; } .logo{ width: 70px; height: 70px; } .linha { width: 80%; border: 1px solid #ccc; margin: 0 auto 15px auto; } .coluna_publicacao { padding: 10px; border: 1px solid #C2BEBE; background-color: white; } .cabecalho_publicacao { margin-bottom: 15px; padding: 10px; background-color: #D97014; color: white; } .imagem_prato { width: 100%; height: 300px; margin-bottom: 9px; border: 4px solid #000; border-radius: 20px; } .titulo_prato { font-weight: bold; margin: 6px 0; text-align: left; } .rodape_publicacao { display: flex; justify-content: space-between; align-items: center; color: #777; margin-top: 5px; } .local{ margin-right: 15px; } .interacoes { display: flex; align-items: center; gap: 10px; } .interacao img { width: 16px; height: 16px; vertical-align: middle; margin-right: 2px; } .bt_entrar{ background-color: #FFA500; color: white; padding: 10px 60px; border-radius: 15px; font-size: 16px; margin-top: 30px; } .rodape { background-color: #D97014; padding: 20px 20px; display: flex; justify-content: space-between; align-items: center; color: #FFFFFF; } </style> </body> </html>
+
+</body>
+</html>

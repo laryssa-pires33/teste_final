@@ -2,19 +2,24 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Publicacao extends Model
 {
-    use HasFactory;
+    //
+    protected $table= 'publicacao';
+    protected $fillable = ['foto','titulo_prato', 'local', 'cidade', 'empresa_id', 'createdAt', 'updatedAt'];
+    public $timestamps = false;
 
-    protected $table = 'publicacoes'; // 👈 Corrige o nome da tabela
+    public function comentarios(){
+        return $this->hasMany(Comentario::class);
+    }
+    
+    public function likes(){
+        return $this->hasMany(\App\Models\Like::class, 'publicacao_id');
+    }
 
-    protected $fillable = ['foto', 'titulo_prato', 'local', 'cidade', 'empresa_id', 'createdAt', 'createdAt'];
-
-    public function avaliacao()
-    {
-        return $this->hasOne(Avaliacao::class, 'publicacao_id');
+    public function deslikes(){
+        return $this->hasMany(\App\Models\Deslike::class, 'publicacao_id');
     }
 }

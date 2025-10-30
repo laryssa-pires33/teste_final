@@ -10,7 +10,7 @@ class AvaliacaoController extends Controller
     {
 
         $avaliacao = Avaliacao::find($request->publicacao_id);
-        $avaliacao->likes++; // incrementa o campo valor (substitua "valor" pelo campo correto)
+        $avaliacao->likes++; 
         $avaliacao->update();
 
         return redirect()->back()->with('success', 'Valor incrementado com sucesso');
